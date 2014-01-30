@@ -6,10 +6,10 @@ $fn = 32;
 r1 = 2;
 
 // radius of the hole in the piece
-r2 = 4;
+r2 = 4.5;
 
 // radius of the base of joints and width of sticks
-r3 = 6;
+r3 = 6.5;
 
 // height of sticks and thickness of pieces.
 h = 2;

@@ -38,10 +38,18 @@ module stick(length) {
 	}
 }
 
+module strut(count = 1, delta_r = 0.4) {
+	difference() {
+		cylinder(r = r3, h = count * h);
+		translate([0,0,-(count+1)/2*h]) cylinder(r = r2 + delta_r, (count+2)*h);
+	}
+}
+
 // best sizes found so far
 outer_joint();
 at(1, 0) inner_joint();
 at(2, 0) outer_sqjoint();
+at(-1,0) strut();
 
 // things to test for better fit between the joint and the sticks
 //at(0, 1) outer_joint(delta_h = 0.25);

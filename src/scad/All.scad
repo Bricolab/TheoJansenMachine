@@ -18,11 +18,11 @@ translate([0, 7, h/2]) {
 	spine();
 }
 
-translate([0, 47, 0]) {
+translate([0, 48, 0]) {
 	rotule();
 }
 
-translate([0, -4, 0]) {
+translate([0, -8, 0]) {
 	outer_joint();
 	at(1, 0) inner_joint();
 	at(2, 0) outer_sqjoint();

@@ -25,10 +25,8 @@ module scapula(a=40.1, b=55.8, c=41.5, height=h, radius2=r2, radius3=r3) {
 
 	difference() {
 		union() {
-			translate([0,0,-height/2]) {
-				linear_extrude(height=height) {
-					polygon(points=[p1,p2,p3]);
-				}
+			linear_extrude(height=height) {
+				polygon(points=[p1,p2,p3]);
 			}
 	
 			atPoints3(P1,P2,P3) joint(height, radius3);
@@ -37,6 +35,4 @@ module scapula(a=40.1, b=55.8, c=41.5, height=h, radius2=r2, radius3=r3) {
 	}
 }
 
-translate([0,0,height/2]) {
-	scapula();
-}
+scapula();

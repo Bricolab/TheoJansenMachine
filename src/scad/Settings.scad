@@ -21,7 +21,7 @@ h_base = 1;
 // -- Base elements ----------------------
 
 module joint(height=h, radius=r3) {
-	cylinder(h=height, r=radius, center=true);
+	cylinder(h=height, r=radius);
 }
 
 module joint_axis(height=h, radius=r2) {
@@ -33,7 +33,7 @@ module joint_sqaxis(height=h, radius=r2, delta_r=0.35) {
  	cube([side, side, height], center=true);
 }
 
-module bar(length, height=h, width=r3) { cube(size=[length, width, height], center=true); }
+module bar(length, height=h, width=r3) { cube(size=[length, width, height]); }
 
 // -- Utility ------------------------------
 
@@ -52,4 +52,4 @@ module atPoints3(p0, p1, p2) {
 	translate(p2) { child(); }
 }
 
-module atEnd(length) { atPoints2([length/2, 0, 0], [-length/2, 0, 0]) child(); }
+module atEnd(length) { atPoints2([0, 0, 0], [length, 0, 0]) child(); }

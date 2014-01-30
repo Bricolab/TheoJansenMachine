@@ -25,10 +25,8 @@ module phalange(a=49.0, b=65.7, c=36.7, height=h, radius2=r2, radius3=r3) {
 
 	difference() {
 		union() {
-			translate([0,0,-height/2]) {
-				linear_extrude(height=height) {
-					polygon(points=[p1,p2,p3]);
-				}
+			linear_extrude(height=height) {
+				polygon(points=[p1,p2,p3]);
 			}
 	
 			atPoints2(P1,P2) joint(height, radius3);
@@ -37,6 +35,4 @@ module phalange(a=49.0, b=65.7, c=36.7, height=h, radius2=r2, radius3=r3) {
 	}
 }
 
-translate([0,0,height/2]) {
-	phalange();
-}
+phalange();

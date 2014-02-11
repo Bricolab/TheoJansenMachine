@@ -1,6 +1,6 @@
 include <Settings.scad>
 
-module clip(stick_count = 2, delta_r = 0.25, delta_h = 0.5, 
+module clip(stick_count = 2, delta_r = 0.45, delta_h = 0.5, 
 		tooth_len = 0.75, cutoff = 1, hole = 1.75) {
 	hc = stick_count * h + delta_h;
 	rc = r2 - delta_r;
@@ -22,10 +22,6 @@ module clip(stick_count = 2, delta_r = 0.25, delta_h = 0.5,
 		}
 }
 
-at(-1,0) clip();
-at(0,0) clip(delta_h = 0.6);
-at(1,0) clip(delta_h = 0.7);
-at(2,0) clip(delta_h = 0.6, delta_r = 0.35);
-at(3,0) clip(delta_h = 0.7, delta_r = 0.35);
-at(4,0) clip(delta_h = 0.6, delta_r = 0.45);
-at(4,0) clip(delta_h = 0.7, delta_r = 0.45);
+at(0,0) clip(delta_h = 0.8);
+at(1,0) clip(delta_h = 0.9);
+at(2,0) clip(delta_h = 1.0);

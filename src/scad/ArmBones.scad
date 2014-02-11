@@ -14,7 +14,7 @@ module disym_armbone(length, height=h, width=r3, radius2=r2, radius3=r3) {
 	difference() {
 		union() {
 			translate([0,-width/2,0]) bar(length*0.8, height, width);
-			translate([length*0.8,-width/2,0]) bar(length*0.2, height/2, width);
+			translate([length*0.7,-width/2,0]) bar(length*0.3, height/2, width);
 			translate([0,0,0]) joint(height, radius3);
 			translate([length,0,0]) joint(height/2, radius3);
 		}
